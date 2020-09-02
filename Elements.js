@@ -1,14 +1,4 @@
-/*
- * @class Node element implementation.
- * @author Jakub Melezinek
- * 
- * @constructor
- * @param {jsgl.elements.AbstractDomPresenter} domPresenter
- * @param {btv.Visualiser} visualiser
- * @param {String} text
- * @param {jsgl.Vector2D} location
- * @extends {jsgl.elements.GroupElement}
- */
+
 btv.elements.NodeElement = function(domPresenter, visualiser, text, location) {
 
     jsgl.elements.GroupElement.call(this, domPresenter, visualiser.panel, 0, 0, 0);
