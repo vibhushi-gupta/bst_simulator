@@ -1,0 +1,271 @@
+
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+
+<title>BinaryTreeVisualiser - Binary Search Tree</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="title" content="Web site" />
+
+<meta name="description" content="Site description here" />
+
+<meta name="keywords" content="keywords here" />
+
+<meta name="language" content="en" />
+
+<meta name="subject" content="Site subject here" />
+
+<meta name="robots" content="All" />
+
+<meta name="copyright" content="Your company" />
+
+<meta name="abstract" content="Site description here" />
+
+<meta name="MSSmartTagsPreventParsing" content="true" />
+
+
+
+<!-- styles -->
+
+<link id="theme" rel="stylesheet" type="text/css" href="style.css" title="theme" />
+
+<script type="text/javascript" src="style.js"></script>
+
+<link href="jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+
+
+
+<!-- third-party scripts: jQuery, jQuery UI and JSGL -->
+
+<script type="text/javascript" src="jsgl.js"></script>
+
+<script type="text/javascript" src="jquery-1.9.1.js"></script>
+
+<script type="text/javascript" src="jquery-ui-1.10.3.custom.js"></script>
+
+
+
+<!-- my scripts -->
+
+<script type="text/javascript" src="btv.js"></script>
+
+<script type="text/javascript" src="Elements.js"></script>
+
+<script type="text/javascript" src="BinaryTree.js"></script>
+
+<script type="text/javascript" src="Algorithms.js"></script>
+
+<script type="text/javascript" src="Visualiser.js"></script>
+
+<script type="text/javascript" src="Controllers.js"></script>
+
+
+
+<!-- google analytics -->
+
+<script type="text/javascript" src="google-analytics.js"></script>
+
+
+
+</head>
+
+<body>
+
+<!-- top wrapper -->
+
+<div id="topWrapper">
+
+    <div id="topBanner">
+        <center>
+            <h4> BINARY SEARCH TREE</h4>
+        </center>
+    </div>
+
+</div>
+
+<div id="topnav">
+
+<ul>
+
+    <li>
+
+        <!---- <a href="home.html" shape="rect">Home</a> -->
+
+    </li>
+
+    <li>
+
+        <!----<a href="binary-heap.html" shape="rect">Binary Heap</a>-->
+
+    </li>
+
+    <li id="current">
+
+        <a href="binary-search-tree.html" shape="rect"></a>
+
+
+    </li>
+    <li>
+
+        <!----<a href="pseudocodes.html" shape="rect">Pseudocodes</a>-->
+
+    </li>
+
+    <li>
+
+        <!--<a href="instructions.html" shape="rect">Instructions</a>-->
+
+    </li>
+
+</ul>
+
+<!-- end top wrapper -->
+
+    
+
+<div id="wrapper">
+
+    <div id="container">
+
+        <!--  content -->
+
+        <div id="content">
+
+            <div style="margin-top:20px;">
+                
+
+                    <div></div>
+
+                    <div>
+                        <h2 style="color:green">ALGORITHMS</h2>
+                        <details>
+                            <summary style="color:#355C7D">
+                            INSERTION</summary>
+                            <p><pre>
+                            1. Start from root.
+                            2. Compare the inserting element with root, if less than root, then recurse for left, else recurse for right.
+                            3. After reaching end,just insert that node at left(if less than current) else right.
+                        </pre></p>
+                         </details>      
+                         <details>
+                             <summary style="color:#355C7D">
+                            DELETION</summary>
+                            <p>
+                                <pre>
+                            1. Input the data of the node to be deleted.
+                            2. If the node is a leaf node, delete the node directly.
+                            3. Else if the node has one child, copy the child to the node to be deleted and delete the child node.
+                            4. Else if the node has two children, find the inorder successor of the node.
+                            5. Copy the contents of the inorder successor to the node to be deleted and delete the inorder successor.
+                                </pre>
+                            </p>
+                        </details>
+                           <details>
+                               <summary style="color:#355C7D">
+                               PREORDER TRAVERSING ALGORITHM</summary>
+                           
+                               <p><pre>
+                                   1. Visit the root.
+                                   2. Traverse the left subtree, i.e., call Preorder(left-subtree)
+                                   3. Traverse the right subtree, i.e., call Preorder(right-subtree)</pre>
+                                </p>
+                           
+                           </details>
+                           <details>
+                           <summary style="color:#355C7D">
+                               INORDER TRAVERSING ALGORITHM</summary>
+                               <p><pre>
+                                   1. Traverse the left subtree, i.e., call Inorder(left-subtree).
+                                   2. Visit the root.
+                                   3. Traverse the right subtree, i.e., call Inorder(right-subtree).
+                               </details>  
+                                  <details>
+                                      <summary style="color:#355C7D">
+                                       POSTORDER TRAVERSING ALGORITHM</summary>
+                               <p><pre>
+                               1. Traverse the left subtree, i.e., call Postorder(left-subtree).
+                               2. Traverse the right subtree, i.e., call Postorder(right-subtree).
+                               3. Visit the root.</pre></p>
+                               </details>
+                               
+                       </pre></p></div>
+
+                    <h1></h1>
+
+                <div class="clear"></div>
+
+
+
+                <h1 id="binary_search_tree" class="anchor"></h1>
+
+
+
+                <div id="controlDiv"></div>
+
+                <div id="drawDiv"></div>
+
+
+
+                <script type="text/javascript">
+
+                    var c = new btv.BinarySearchTreeController(document.getElementById("controlDiv"), document.getElementById("drawDiv"));
+
+                </script>
+
+
+
+                <div class="clear"></div>
+            </div>
+
+
+
+        </div>
+
+        <div class="clear"></div>
+
+    </div>
+
+
+    <!-- end content -->
+
+    <div class="clear" style="height:40px">
+
+
+
+    </div>
+
+</div>
+
+
+<!-- end container -->
+
+
+
+<div id="bottomWrapper">
+
+    <div id="bottom-links">
+
+        <div style="padding-top:20px">
+
+
+        </div>
+
+        <a target="_self" href="quiz.html">
+            <button>task</button>
+            </a>
+            <br>
+
+
+    </div>
+
+</body>
+
+</html>
+
