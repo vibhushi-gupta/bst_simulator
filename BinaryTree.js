@@ -1,11 +1,4 @@
-/**
- * @author Jakub Melezinek
- * @class Binary tree implementation.
- * 
- * @public
- * @constructor
- * @param {String} name The name of the tree
- */
+
 btv.BinaryTree = function(name) {
     
     /**
