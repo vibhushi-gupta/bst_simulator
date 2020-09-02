@@ -1,14 +1,4 @@
-/**
- * @class Abstract algorithm
- * @author Jakub Melezinek
- * 
- * @constructor
- * @abstract
- * @protected
- * @param {btv.BinaryTree} tree
- * @param {btv.Visualiser} visualiser
- * @param {Boolean} [isSubalgorithm] Set true if this algorithm is part of another algorithm.
- */
+
 btv.AbstractAlgorithm = function(tree, visualiser, isSubalgorithm) {
     /**
      * @protected
