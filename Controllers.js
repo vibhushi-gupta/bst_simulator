@@ -1,13 +1,4 @@
-/**
- * @class Abstract controller.
- * @author Jakub Melezinek
- * 
- * @abstract
- * @protected
- * @constructor
- * @param {HTMLDivElement} controlsDiv
- * @param {HTMLDivElement} treeDiv
- */
+
 btv.AbstractController = function(controlsDiv, treeDiv) {
 
     // Prevent flashing new created elements.
